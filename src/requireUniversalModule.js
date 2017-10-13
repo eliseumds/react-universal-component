@@ -215,9 +215,9 @@ const getConfig = (
   return {
     file: 'default',
     id: options.id || 'default',
-    chunkName: options.chunkName || 'default',
-    resolve: options.resolve || '',
-    path: options.path || '',
+    chunkName: options.chunkName || universalConfig.chunkName(),
+    resolve: options.resolve || universalConfig.resolve(),
+    path: options.path || universalConfig.path(),
     load
   }
 }
